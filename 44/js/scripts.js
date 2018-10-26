@@ -1,4 +1,8 @@
-function getData() {
+function getData(type) {
+
+    if(!type) {
+        throw new Error("Nieprawidłowy typ.");
+    }
 
     return {
         firstName: "Jan",
@@ -14,6 +18,10 @@ function searchDb() {
     console.log("Pobieram dane.");
 
     var data = getData();
+
+    if(data === null) {
+        throw new Error("Brak danych");
+    }
 
     console.log("Zamykam połączenie.");
 
