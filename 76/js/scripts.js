@@ -2,6 +2,6 @@ var txt = "";
 
 var b = Boolean(txt);
 
-if(b === false) {
+if(!!txt === false) {
   console.log("fałsz");
 }
