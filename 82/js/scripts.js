@@ -33,7 +33,7 @@ var people = [
 
 var has5 = false;
 
-for(var i = 0; i < people.length; i++) {
+mainLoop: for(var i = 0; i < people.length; i++) {
 
     var numbers = people[i].numbers;
 
@@ -42,7 +42,7 @@ for(var i = 0; i < people.length; i++) {
         if(numbers[j] === 5) {
             has5 = true;
             console.log(5);
-            break;
+            break mainLoop;
         }
 
     }
