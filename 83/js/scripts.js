@@ -4,7 +4,10 @@ console.log(arr);
 
 arr.sort(function(a, b) {
 
+    var random1 = Math.round( Math.random() * (10 - 1) + 1 ),
+        random2 = Math.round( Math.random() * (10 - 1) + 1 );
 
+    return random1 - random2;
 
 });
 
