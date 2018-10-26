@@ -3,11 +3,15 @@ var body = document.body,
 
 body.addEventListener("click", function(e) {
 
+    console.log(e.eventPhase);
+
     console.log("Kliknąłeś w body");
 
-}, false);
+}, true);
 
 body.addEventListener("click", function(e) {
+
+    console.log(e.eventPhase);
 
     console.log("Kliknąłeś w body ponownie");
 
@@ -15,6 +19,12 @@ body.addEventListener("click", function(e) {
 
 btn.addEventListener("click", function(e) {
 
+    console.log(e.eventPhase);
+
     console.log("Kliknąłeś przycisk");
 
 }, false);
+
+// phase 1 - capturing
+// phase 2 - on target
+// phase 3 - bubbling
